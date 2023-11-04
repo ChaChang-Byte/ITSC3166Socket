@@ -23,6 +23,6 @@ print('The server is ready to receive your data \n')
 while True:
     ConnectionSocket, Address = ServerSocket.accept()
     ClientMessage = ConnectionSocket.recv(4096)
-    data=pickle.loads(ClientMessage)
+    data = pickle.loads(ClientMessage)
     cv2.imwrite("image_2.png",data)
     ConnectionSocket.close()
